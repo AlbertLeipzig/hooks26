@@ -4,7 +4,7 @@
 
 ## useEffect => Side-Effects (meisten bei uns API calls)
 
-## useContext
+## useContext => Global State
 
 ## useReducer
 

@@ -1,28 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App.jsx';
+import { AppProvider } from './utils/AppContext';
 import './style/main.scss';
-import { AllUsersPage } from './pages/AllUsersPage.jsx';
-import { SingleUserPage } from './pages/SingleUserPage.jsx';
-import { NotFoundPage } from './pages/NotFoundPage.jsx';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <AllUsersPage />,
-    errorElement: <NotFoundPage />,
-    children: [
-      {
-        path: '/user',
-        element: <SingleUserPage />,
-      },
-    ],
-  },
-]);
+import { RouterProvider } from 'react-router-dom';
+import { router } from './utils/AppRouter';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+  <AppProvider>
     <RouterProvider router={router} />
-  </React.StrictMode>
+  </AppProvider>
 );
