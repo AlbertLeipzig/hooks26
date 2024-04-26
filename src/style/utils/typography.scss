@@ -1,0 +1,35 @@
+@use './colors.scss' as *;
+
+$fontFace: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+@mixin baseFont {
+  font-size: 4rem;
+  font-family: $fontFace;
+  color: $black;
+}
+
+h1 {
+  font-family: $fontFace;
+  font-size: 5rem;
+  color: $black;
+}
+
+p {
+  @include baseFont;
+}
+
+a {
+  @include baseFont;
+}
+
+button {
+  @include baseFont;
+}
+
+label {
+  @include baseFont;
+}
+
+li {
+  @include baseFont;
+  margin: 1ch 0;
+}
