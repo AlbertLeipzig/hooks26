@@ -1,0 +1,15 @@
+:root {
+  font-size: 62.5%;
+}
+
+@mixin baseFont {
+  font-size: 4rem;
+}
+
+p {
+  @include baseFont;
+}
+
+li {
+  @include baseFont;
+}
